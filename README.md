@@ -1,6 +1,6 @@
 # tp_laboratorio_1
 
-# 1 Enunciado
+### 1 Enunciado
 Hacer una calculadora. Para ello el programa iniciará y contará con un menú de opciones:
 1. Ingresar1eroperando(A=x)
 2. Ingresar2dooperando(B=y)
