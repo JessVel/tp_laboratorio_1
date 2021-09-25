@@ -16,10 +16,10 @@ c) “ElresultadodeA/Bes:r”o“Noesposibledividirporcero” d) “El resultado
 e) “El factorial de A es: r1 y El factorial de B es: r2”
 5. Salir
 
--Todas las funciones matemáticas del menú se deberán realizar en una biblioteca aparte, que contenga las funciones para realizar las cinco operaciones.
--En el menú deberán aparecer los valores actuales cargados en los operandos A y B (donde dice “x” e “y” en el ejemplo, se debe mostrar el número cargado)
--Deberán contemplarse los casos de error (división por cero, etc).
--Documentar todas las funciones.
+- Todas las funciones matemáticas del menú se deberán realizar en una biblioteca aparte, que contenga las funciones para realizar las cinco operaciones.
+- En el menú deberán aparecer los valores actuales cargados en los operandos A y B (donde dice “x” e “y” en el ejemplo, se debe mostrar el número cargado)
+- Deberán contemplarse los casos de error (división por cero, etc).
+- Documentar todas las funciones.
 
 ### Cómo realizar y entregar el trabajo práctico
 >El trabajo práctico deberá ser entregado en el repositorio de GIT correspondiente al TP1 de la materia.
