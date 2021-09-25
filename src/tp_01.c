@@ -10,14 +10,8 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include "utn.h"
 
-int funcAdd (int operatorA, int operatorB);
-int funcSubstract (int operatorA, int operatorB);
-int funcMultiply (int operatorA, int operatorB);
-int funcDevide (int operatorA, int operatorB, float *varDirection);
-
-#define TRUE -1
-#define FALSE 0
 int main(void) {
 
 	setbuf(stdout,NULL);
@@ -95,40 +89,6 @@ int main(void) {
 		}
 	}
 }
-
-int funcAdd (int operatorA, int operatorB){
-		int result;
-		result = operatorA + operatorB;
-		return result;
-}
-
-int funcSubstract (int operatorA, int operatorB){
-		int result;
-		result = operatorA - operatorB;
-		return result;
-}
-
-int funcMultiply (int operatorA, int operatorB){
-		int result;
-		result = operatorA * operatorB;
-		return result;
-}
-
-int funcDevide (int operatorA, int operatorB, float *pResultFloat){
-		float result;
-		int error;
-
-		if (operatorB != 0 && pResultFloat != NULL) {
-		result = (float)operatorA / operatorB;
-		*pResultFloat = result;
-		error = 0;
-
-		} else {
-			error = -1;
-		}
-		return error;
-}
-
 
 
 
