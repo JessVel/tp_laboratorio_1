@@ -23,5 +23,5 @@ e) “El factorial de A es: r1 y El factorial de B es: r2”
 
 ### Cómo realizar y entregar el trabajo práctico
 >El trabajo práctico deberá ser entregado en el repositorio de GIT correspondiente al TP1 de la materia.
->El mismo consistirá en el proyecto de CodeBlocks con el programa funcionando y comentado, respetando las reglas de estilo de la cátedra. La compilación no deberá >arrojar mensajes de error ni de warnings.
+>El mismo consistirá en el proyecto de CodeBlocks con el programa funcionando y comentado, respetando las reglas de estilo de la cátedra. La compilación no deberá arrojar mensajes de error ni de warnings.
 >El proyecto deberá contar con la biblioteca descripta en la sección número dos, y se deberá hacer uso de dichas funciones para resolver la lógica del programa.
