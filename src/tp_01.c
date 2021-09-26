@@ -23,7 +23,10 @@ int main(void) {
 	char operation;
 	int run = 1;
 	float responseFloat;
-	int responseInt;
+	float resultFactA;
+	float resultFactB;
+	int responseFactA;
+	int responseFactB;
 
 	while ( run == 1 ){
 
@@ -74,6 +77,20 @@ int main(void) {
 					printf("El resultado es: %f\n", resultFloat);
 				} else {
 					printf("No es posible dividir por cero");
+				}
+				break;
+			case '!':
+				responseFactA = funcFact(numA, &resultFactA);
+				if(responseFactA == 0){
+					printf("El resultado es del primero numero es: %d\n", resultFactA);
+				} else {
+					printf("Hubo un error");
+				}
+				responseFactB = funcFact(numB, &resultFactB);
+				if(responseFactB == 0){
+					printf("El resultado es del segundo numero es: %d\n", resultFactB);
+				} else {
+					printf("Hubo un error");
 				}
 				break;
 			default:

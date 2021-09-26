@@ -2,7 +2,7 @@
  * utn.c
  *
  *  Created on: Sep 25, 2021
- *      Author: jesica Velazquez
+ *      Author: Jesica Velazquez
  */
 
 #include <stdio.h>
@@ -42,4 +42,19 @@ int funcDevide (int operatorA, int operatorB, float *pResultFloat){
 		return error;
 }
 
+int funcFact (int operator, float *pResultFloat){
+
+	float fact = 1;
+	int error = TRUE;
+
+	if (operator > 0) {
+
+		for (int i = operator; i > 1; i--) {
+		fact = fact * i;
+		}
+	*pResultFloat = fact;
+	error = FALSE;
+	}
+	return error;
+}
 
