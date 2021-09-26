@@ -18,7 +18,7 @@ int main(void) {
 
 	int numA;
 	int numB;
-	int option = 6;
+	int option = 1;
 	int addResult;
 	int substractResult;
 	int multResult;
@@ -31,7 +31,7 @@ int main(void) {
 
 
 
-	while(option < 6){
+	while(option < 5){
 
 		printf("Selecciones una de las siguientes opciones: \n\t 1. Ingresar 1er operando\n\t 2. Ingresar 2do operando\n\t 3.Realizar todas las operaciones (suma, resta, multiplicacion, division y factorial)\n\t 4. Imprimir todas las operaciones\n\t 5. Salir");
 		fflush(stdin);
