@@ -10,57 +10,54 @@
 #include "utn.h"
 
 // Funcion para sumar
-int funcAdd (int operatorA, int operatorB){
+void funcAdd (int operatorA, int operatorB, int* addResult){
 		int result;
 		result = operatorA + operatorB;
-		return result;
+		*addResult = result;
 }
 
 //Funcion para restar
-int funcSubstract (int operatorA, int operatorB){
+void funcSubstract (int operatorA, int operatorB, int* substractResult){
 		int result;
 		result = operatorA - operatorB;
-		return result;
+		*substractResult = result;
 }
 
 //Funcion para multiplicar
-int funcMultiply (int operatorA, int operatorB){
+void funcMultiply (int operatorA, int operatorB, int* multResult) {
 		int result;
 		result = operatorA * operatorB;
-		return result;
+		*multResult = result;
 }
 
 //Funcion para dividir
-int funcDevide (int operatorA, int operatorB, float *pResultFloat){
+int funcDevide (int operatorA, int operatorB, float* divideResult) {
 		float result;
-		int error;
+		int error = TRUE;
 
-		if (operatorB != 0 && pResultFloat != NULL) {
+		if (operatorB != 0) {
 		result = (float)operatorA / operatorB;
-		*pResultFloat = result;
-		error = 0;
-
-		} else {
-			error = -1;
+		*divideResult = result;
+		error = FALSE;
 		}
 		return error;
 }
 
 //Funcion para calcular factorial
-int funcFact (int operator, int* pResult){
+int funcFact (int operator, int* factResult){
 
-	int fact = 1;
-	int error = TRUE;
+		int fact = 1;
+		int error = TRUE;
 
-	if (operator > 0) {
+		if (operator > 0) {
 
-		for (int i = operator; i > 1; i--) {
-		fact = fact * i;
-		}
-	*pResult = fact;
-	error = FALSE;
-	}
-	return error;
+			for (int i = operator; i > 1; i--) {
+			fact = fact * i;
+			}
+			*factResult = fact;
+			error = FALSE;
+			}
+		return error;
 }
 
 //Funcion para obtener numero

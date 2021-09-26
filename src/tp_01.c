@@ -18,82 +18,86 @@ int main(void) {
 
 	int numA;
 	int numB;
-	int resultInt;
-	float resultFloat;
-	char operation;
-	int run = 1;
-	float responseFloat;
-	int resultFactA;
-	int resultFactB;
-	int responseFactA;
-	int responseFactB;
+	int option = 6;
+	int addResult;
+	int substractResult;
+	int multResult;
+	float divideResult;
+	int AfactResult;
+	int BfactResult;
+	int errorDivide;
+	int errorFactA;
+	int errorFactB;
 
-	while ( run == 1 ){
 
-		getNum(&numA);
 
-		getNum(&numB);
+	while(option < 6){
 
-		//Solicita una operacion para realizar
-		printf("Por favor, ingrese una operacion: suma (+), resta(-) ,multiplicacion (*) ,division(/), factorial(!):\n");
+		printf("Selecciones una de las siguientes opciones: \n\t 1. Ingresar 1er operando\n\t 2. Ingresar 2do operando\n\t 3.Realizar todas las operaciones (suma, resta, multiplicacion, division y factorial)\n\t 4. Imprimir todas las operaciones\n\t 5. Salir");
 		fflush(stdin);
-		scanf("%c", &operation);
+		scanf("%d", &option);
 
 
-		//Switch para evaluar que operacion hacer dependiendo el caso
-		switch (operation) {
-			case '+':
-				resultInt = funcAdd(numA, numB);
-				printf("El resultado de la suma es: %d\n", resultInt);
-				break;
+		//Switch para evaluar que opciones hacer dependiendo el caso
+		switch (option){
+		case 1:
+			getNum(&numA);
+			break;
+		case 2:
+			getNum(&numB);
+			break;
+		case 3:
+			funcAdd(numA, numB, &addResult);
+			funcSubstract(numA, numB, &substractResult);
+			funcMultiply(numA, numB, &multResult);
+			errorDivide = funcDevide(numA, numB, &divideResult);
+			errorFactA = funcFact(numA, &AfactResult);
+			errorFactB = funcFact(numB, &BfactResult);
 
-			case '-':
-				resultInt = funcSubstract(numA, numB);
-				printf("El resultado de la resta es: %d\n", resultInt);
-				break;
+			break;
+		case 4:
+			printf("El resultado de la suma es: %d\n", addResult);
+			printf("El resultado de la resta es: %d\n", substractResult);
+			printf("El resultado de la multiplicación es: %d\n", multResult);
 
-			case '*':
-				resultInt = funcMultiply(numA, numB);
-				printf("El resultado de la multiplicación es: %d\n", resultInt);
-				break;
+			if (errorDivide == 0) {
+				printf("El resultado de la multiplicación es: %f\n", divideResult);
+			} else {
+				printf("Hubo un error en la division.");
+			}
 
-			case '/':
-				responseFloat = funcDevide(numA, numB, &resultFloat);
-				if( responseFloat == 0){
-					printf("El resultado es: %f\n", resultFloat);
-				} else {
-					printf("No es posible dividir por cero");
-				}
-				break;
-			case '!':
-				responseFactA = funcFact(numA, &resultFactA);
-				if(responseFactA == 0){
-					printf("El resultado es del primero numero es: %d\n", resultFactA);
-				} else {
-					printf("Hubo un error");
-				}
-				responseFactB = funcFact(numB, &resultFactB);
-				if(responseFactB == 0){
-					printf("El resultado es del segundo numero es: %d\n", resultFactB);
-				} else {
-					printf("Hubo un error");
-				}
-				break;
-			default:
-				break;
-		}
+			if (errorFactA == 0) {
+				printf( "El resultado es del factorial es: %d\n", AfactResult);
+			} else {
+				printf("Hubo un error en el factorial.");
+			}
 
-		//Solicita respuesta para continuar o salir
-		printf("Quiere continuar? 1 para continuar, 0 para salir:\n");
-				fflush(stdin);
-				scanf("%d", &run);
+			if (errorFactB == 0) {
+				printf( "El resultado es del factorial es: %d\n", BfactResult);
+			} else {
+				printf("Hubo un error en el factorial.");
+			}
+			break;
 
-		//Termina el programa
-		if( run == 0 ){
+		case 5:
 			printf("Programa terminado!");
+			break;
+
+		default:
+			break;
 		}
 	}
 }
+
+
+
+
+
+
+
+
+
+
 
 
 
