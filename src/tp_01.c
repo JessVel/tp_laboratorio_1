@@ -30,31 +30,37 @@ int main(void) {
 
 	while ( run == 1 ){
 
+		//Solicita primer numero
 		printf("Por favor, ingrese un numero:\n");
 		fflush(stdin);
 		scanf("%d", &numA);
 
+		//Valida que no sea 0 y en caso que sea lo vuelve a pedir
 		if( numA == 0 ){
 			printf("No se puede dividir por 0, por favor, ingrese otro numero");
 			fflush(stdin);
 			scanf("%d", &numA);
 		}
 
+		// Solicita segundo numero
 		printf("Por favor, ingrese otro un numero:\n");
 		fflush(stdin);
 		scanf("%d", &numB);
 
+		//Valida que no sea 0 y en caso que sea lo vuelve a pedir
 		if( numB == 0 ){
 		printf("No se puede dividir por 0, por favor, ingrese otro numero\n");
 		fflush(stdin);
 		scanf("%d", &numB);
 		}
 
+		//Solicita una operacion para realizar
 		printf("Por favor, ingrese una operacion: suma (+), resta(-) ,multiplicacion (*) ,division(/), factorial(!):\n");
 		fflush(stdin);
 		scanf("%c", &operation);
 
 
+		//Switch para evaluar que operacion hacer dependiendo el caso
 		switch (operation) {
 			case '+':
 				resultInt = funcAdd(numA, numB);
@@ -97,10 +103,12 @@ int main(void) {
 				break;
 		}
 
-		printf("Quiere seguir? 1 para seguir, 0 para salir:\n");
+		//Solicita respuesta para continuar o salir
+		printf("Quiere continuar? 1 para continuar, 0 para salir:\n");
 				fflush(stdin);
 				scanf("%d", &run);
 
+		//Termina el programa
 		if( run == 0 ){
 			printf("Programa terminado!");
 		}

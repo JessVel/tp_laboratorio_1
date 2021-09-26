@@ -9,24 +9,28 @@
 #include <stdlib.h>
 #include "utn.h"
 
+// Funcion para sumar
 int funcAdd (int operatorA, int operatorB){
 		int result;
 		result = operatorA + operatorB;
 		return result;
 }
 
+//Funcion para restar
 int funcSubstract (int operatorA, int operatorB){
 		int result;
 		result = operatorA - operatorB;
 		return result;
 }
 
+//Funcion para multiplicar
 int funcMultiply (int operatorA, int operatorB){
 		int result;
 		result = operatorA * operatorB;
 		return result;
 }
 
+//Funcion para dividir
 int funcDevide (int operatorA, int operatorB, float *pResultFloat){
 		float result;
 		int error;
@@ -42,6 +46,7 @@ int funcDevide (int operatorA, int operatorB, float *pResultFloat){
 		return error;
 }
 
+//Funcion para calcular factorial
 int funcFact (int operator, int* pResult){
 
 	int fact = 1;
