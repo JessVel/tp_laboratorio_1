@@ -30,29 +30,9 @@ int main(void) {
 
 	while ( run == 1 ){
 
-		//Solicita primer numero
-		printf("Por favor, ingrese un numero:\n");
-		fflush(stdin);
-		scanf("%d", &numA);
+		getNum(&numA);
 
-		//Valida que no sea 0 y en caso que sea lo vuelve a pedir
-		if( numA == 0 ){
-			printf("No se puede dividir por 0, por favor, ingrese otro numero");
-			fflush(stdin);
-			scanf("%d", &numA);
-		}
-
-		// Solicita segundo numero
-		printf("Por favor, ingrese otro un numero:\n");
-		fflush(stdin);
-		scanf("%d", &numB);
-
-		//Valida que no sea 0 y en caso que sea lo vuelve a pedir
-		if( numB == 0 ){
-		printf("No se puede dividir por 0, por favor, ingrese otro numero\n");
-		fflush(stdin);
-		scanf("%d", &numB);
-		}
+		getNum(&numB);
 
 		//Solicita una operacion para realizar
 		printf("Por favor, ingrese una operacion: suma (+), resta(-) ,multiplicacion (*) ,division(/), factorial(!):\n");

@@ -63,3 +63,30 @@ int funcFact (int operator, int* pResult){
 	return error;
 }
 
+//Funcion para obtener numero
+void getNum (int* operator){
+	int error = FALSE;
+
+	printf("Ingresa un numero: \n");
+	error = scanf("%d", operator);
+
+	while (error == TRUE){
+		printf("Numero invalido, por favor, ingrese otro numero: \n");
+		fflush(stdin);
+		error = scanf("%d", operator);
+	}
+}
+
+//Funcion para obtener float
+void getFloat (float* operator){
+	int error = FALSE;
+
+	printf("Ingresa un numero: \n");
+	error = scanf("%f", operator);
+
+	while (error == TRUE){
+		printf("Numero invalido, por favor, ingrese otro numero: \n");
+		fflush(stdin);
+		error = scanf("%f", operator);
+	}
+}

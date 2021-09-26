@@ -16,5 +16,8 @@ int funcSubstract (int operatorA, int operatorB);
 int funcMultiply (int operatorA, int operatorB);
 int funcDevide (int operatorA, int operatorB, float *varDirection);
 int funcFact (int operator, int* pResult);
+void getNum (int* operator);
+void getFloat (float* operator);
+
 
 #endif /* UTN_H_ */
