@@ -42,9 +42,9 @@ int funcDevide (int operatorA, int operatorB, float *pResultFloat){
 		return error;
 }
 
-int funcFact (int operator, float *pResultFloat){
+int funcFact (int operator, int* pResult){
 
-	float fact = 1;
+	int fact = 1;
 	int error = TRUE;
 
 	if (operator > 0) {
@@ -52,7 +52,7 @@ int funcFact (int operator, float *pResultFloat){
 		for (int i = operator; i > 1; i--) {
 		fact = fact * i;
 		}
-	*pResultFloat = fact;
+	*pResult = fact;
 	error = FALSE;
 	}
 	return error;

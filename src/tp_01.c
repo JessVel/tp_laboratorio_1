@@ -23,8 +23,8 @@ int main(void) {
 	char operation;
 	int run = 1;
 	float responseFloat;
-	float resultFactA;
-	float resultFactB;
+	int resultFactA;
+	int resultFactB;
 	int responseFactA;
 	int responseFactB;
 

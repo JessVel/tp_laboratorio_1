@@ -15,6 +15,6 @@ int funcAdd (int operatorA, int operatorB);
 int funcSubstract (int operatorA, int operatorB);
 int funcMultiply (int operatorA, int operatorB);
 int funcDevide (int operatorA, int operatorB, float *varDirection);
-int funcFact (int operatorA, float* pResultFloat);
+int funcFact (int operator, int* pResult);
 
 #endif /* UTN_H_ */
