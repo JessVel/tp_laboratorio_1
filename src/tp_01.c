@@ -58,17 +58,17 @@ int main(void) {
 		switch (operation) {
 			case '+':
 				resultInt = funcAdd(numA, numB);
-				printf("El resultado de la suma es:", resultInt);
+				printf("El resultado de la suma es: %d\n", resultInt);
 				break;
 
 			case '-':
 				resultInt = funcSubstract(numA, numB);
-				printf("El resultado de la resta es:", resultInt);
+				printf("El resultado de la resta es: %d\n", resultInt);
 				break;
 
 			case '*':
 				resultInt = funcMultiply(numA, numB);
-				printf("El resultado de la multiplicación es:", resultInt);
+				printf("El resultado de la multiplicación es: %d\n", resultInt);
 				break;
 
 			case '/':
